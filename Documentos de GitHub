@@ -1,0 +1,43 @@
+Documentos de GitHub
+Administrar la política de firma de confirmación para su organización
+En este articulo
+Acerca de las firmas de confirmación
+Gestión de firmas de confirmación obligatorias para su organización
+Puede solicitar a los usuarios que firmen automáticamente todas las confirmaciones que realicen en la interfaz web de GitHub en los repositorios que son propiedad de su organización.
+
+Quién puede usar esta función
+Los propietarios de la organización pueden exigir que el autor de la confirmación firme todas las confirmaciones en los repositorios que son propiedad de la organización.
+
+Acerca de las firmas de confirmación
+Para afirmar que una confirmación cumple con las reglas y las licencias que rigen un repositorio, muchas organizaciones requieren que los desarrolladores firmen cada confirmación. Si su organización requiere firmas de confirmación, puede hacer que la firma sea una parte integral del proceso de confirmación habilitando firmas de confirmación obligatorias para los usuarios que se comprometen a través de la interfaz web de GitHub. Después de habilitar las firmas de confirmación obligatorias para una organización, cada confirmación realizada en los repositorios de esa organización a través de la interfaz web de GitHub será firmada automáticamente por el autor de la confirmación.
+
+Las personas con acceso de administrador a un repositorio también pueden habilitar firmas de confirmación obligatorias en el nivel del repositorio. Para obtener más información, consulta " Administrar la política de aprobación de confirmaciones para tu repositorio ".
+
+Las firmas de confirmación obligatorias solo se aplican a las confirmaciones realizadas a través de la interfaz web. Para las confirmaciones realizadas a través de la interfaz de línea de comandos de Git, el autor de la confirmación debe firmar la confirmación con la --signoffopción. Para obtener más información, consulte la documentación de Git .
+
+Puede determinar si un repositorio al que está contribuyendo tiene habilitadas las firmas de confirmación obligatorias al verificar el encabezado del formulario de confirmación en la parte inferior del archivo que está editando. Una vez habilitada la firma de confirmación obligatoria, el encabezado dirá "Cerrar sesión y confirmar cambios".
+
+Captura de pantalla del formulario de confirmación con la firma obligatoria habilitada
+
+Antes de firmar un compromiso, debe asegurarse de que su compromiso cumpla con las reglas y las licencias que rigen el repositorio con el que se está comprometiendo. El repositorio puede usar un acuerdo de aprobación, como el Certificado de origen del desarrollador de la Fundación Linux. Para obtener más información, consulte el Certificado de origen del desarrollador .
+
+Firmar una confirmación difiere de firmar una confirmación. Para obtener más información sobre cómo firmar una confirmación, consulta " Acerca de la verificación de la firma de una confirmación" .
+
+Gestión de firmas de confirmación obligatorias para su organización
+En la esquina superior derecha de GitHub.com, haga clic en su foto de perfil y luego en Sus organizaciones .
+Tus organizaciones en el menú de perfil
+
+Junto a la organización, haz clic en Configuración .
+El botón de configuración
+
+En la sección "Código, planificación y automatización" de la barra lateral, seleccione Repositorio y luego haga clic en Valores predeterminados del repositorio .
+
+Seleccione o anule la selección de Requerir que los colaboradores firmen las confirmaciones basadas en la web .
+Captura de pantalla de Requerir que los colaboradores firmen las confirmaciones basadas en la web
+
+¿Te ayudó este documento?
+
+Política de privacidad
+¡Ayúdanos a hacer que estos documentos sean geniales!
+Todos los documentos de GitHub son de código abierto. ¿Ves algo que está mal o no está claro? Envíe una solicitud de extracción.
+
