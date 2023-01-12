@@ -1,0 +1,50 @@
+GitHub Docs
+Acerca del examen de código con CodeQL
+En este artículo
+Acerca de code scanning con CodeQL
+Acerca de CodeQL
+Acerca de las consultas de CodeQL
+Puedes utilizar CodeQL para identificar las vulnerabilidades y errores en tu código. Los resultados se muestran como alertas del code scanning en GitHub.
+
+Code scanning está disponible para todos los repositorios públicos en GitHub.com. Code scanning también está disponible para los repositorios privados que pertenecen a las organizaciones que usan GitHub Enterprise Cloud y que tienen una licencia de GitHub Advanced Security. Para más información, consulte "Acerca de GitHub Advanced Security".
+
+Acerca de code scanning con CodeQL
+CodeQL es el motor de análisis de código que desarrolló GitHub para automatizar las verificaciones de seguridad. Puedes analizar tu código utilizando CodeQL y mostrando los resultados como alertas del code scanning.
+
+Hay dos formas principales para utilizar el análisis de CodeQL para el code scanning:
+
+Agregar el flujo de trabajo de CodeQL a tu repositorio. Se usa la acción github/codeql-action para ejecutar la CodeQL CLI. Para obtener más información, consulte "Configuración de code scanning para un repositorio".
+Ejecutar el CLI de CodeQL directamente en un sistema de IC externo y cargar los resultados en GitHub. Para obtener más información, consulte "Acerca del análisis de código de CodeQL en el sistema de CI".
+Acerca de CodeQL
+El CodeQL trata el código como datos, permitiéndote encontrar vulnerabilidades potenciales en tu código con mayor confianza que los analizadores estáticos tradicionales.
+
+Generas una base de datos de CodeQL para representar tu base de código.
+Entonces, ejecutarás consultas de CodeQL en esa base de datos para identificar problemas en la base de código.
+Estos resultados de consulta se muestran como alertas del code scanning en GitHub cuando utilizas al CodeQL con el code scanning.
+CodeQL es compatible tanto con lenguajes compilados como interpretados, y puede buscar vulnerabilidades y errores en el código escrito en los lenguajes compatibles.
+
+C/C++
+C#
+Go
+Java/Kotlin
+JavaScript/TypeScript
+Python
+Ruby
+Notas:
+
+El análisis de CodeQL para Kotlin se encuentra actualmente en versión beta. Durante el beta, el análisis para Kotlin será menos exhaustivo que el análisis de CodeQL para otros lenguajes.
+Usa java para analizar el código escrito en Java, Kotlin o ambos.
+Usa javascript para analizar el código escrito en JavaScript, TypeScript o ambos.
+Para más información, vea la documentación en el sitio web de CodeQL: "Lenguajes y marcos admitidos".
+
+Acerca de las consultas de CodeQL
+Los expertos de GitHub, investigadores de seguridad y contribuyentes comunitarios escriben y mantienen las consultas predeterminadas de CodeQL que se utilizan para el code scanning. Las consultas se actualizan frecuentemente para mejorar el análisis y reducir cualquier resultado falso positivo. Las consultas son código abierto, por lo que puede ver y contribuir en ellas en el repositorio de github/codeql. Para obtener más información, consulte CodeQL en el sitio web de CodeQL. También puede escribir consultas propias. Para obtener más información, consulte "Acerca de las consultas de CodeQL" en la documentación de CodeQL.
+
+Puedes ejecutar consultas adicionales como parte de tu análisis de escaneo de código. Estas consultas deben pertenecer a un paquete de consultas (beta) de CodeQL publicado o un paquete de QL en un repositorio. Los paquetes de CodeQL (beta) proporcionan los siguientes beneficios sobre los paquetes tradicionales de QL:
+
+Cuando un paquete de consultas de CodeQL (beta) se publica en el Container registry de GitHub, todas las dependencias transitivas que requieren las consultas y un caché de compilación se incluyen en el paquete. Esto mejora el rendimiento y garantiza que el ejecutar las consultas del paquete proporciona resultados idénticos cada vez que actualizas a una versión nueva del paquete o de CLI.
+Los paquetes de QL no incluyen las dependencias transitivas, así que las consultas del paquete pueden depender únicamente de las librerías estándar (esto es, librerías a las que se hace referencia mediante una instrucción import LANGUAGE en la consulta) o en las librerías del mismo paquete de QL que la consulta.
+Para obtener más información, consulte "Acerca de los paquetes de CodeQL y "Acerca de los paquetes de QL packs en la documentación de CodeQL.
+
+Nota: La funcionalidad de administración de paquetes de CodeQL, incluidos los de CodeQL, se encuentra actualmente en versión beta y está sujeta a cambios.
+
